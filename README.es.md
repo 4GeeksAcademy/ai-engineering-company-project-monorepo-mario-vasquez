@@ -14,7 +14,7 @@ _These instructions are also available in [English](./README.md)._
 Este repositorio es la **plantilla de inicio** para los proyectos transversales. Trabajarás con escenarios de empresas reales (Brasaland, TrackFlow, Nexova) construyendo entregables que se corresponden con los hitos del curso (Web, Programación, Backend, Telemetría, RAG, Agentes, Workflows, Tiempo real).
 
 - Crea una plantilla a partir de este repositorio.
-- Reemplaza el `CONTEXT.md` placeholder por el contexto de tu empresa asignada.
+- Revisa el contexto de empresa en `CONTEXT.md` y `CONTEXT.es.md`; mantén ambas versiones alineadas si cambias la empresa asignada.
 - Usa `skills/` y los `README.md` por carpeta como guía de trabajo.
 
 ---
@@ -23,7 +23,7 @@ Este repositorio es la **plantilla de inicio** para los proyectos transversales.
 
 1. **Usa este repositorio como plantilla** y crea tu propio repo de proyecto.
 2. **Clona** tu repositorio (o ábrelo en Codespaces).
-3. **Reemplaza** `CONTEXT.md` con el contexto completo de tu empresa asignada.
+3. **Revisa** `CONTEXT.md` y `CONTEXT.es.md` para confirmar que correspondan a tu empresa asignada; actualiza ambos si cambias de contexto.
 4. **Lee esta guía de carpetas** y abre el `README.md` de la carpeta en la que estés trabajando.
 5. **Empieza a implementar** en la carpeta correcta — no tires todo en la raíz.
 6. **Documenta** lo que añadas: cada app, servicio, agente o pipeline nuevo lleva subcarpeta + README.
@@ -53,7 +53,7 @@ Estás construyendo **una sola empresa** a lo largo de muchos hitos y proyectos.
 
 > 💡 Actualmente el repositorio ofrece solo una **estructura base de carpetas y documentación**. Todavía no incluye aplicaciones ejecutables ni scripts globales en la raíz.
 >
-> - `CONTEXT.md` es un placeholder y debe sustituirse por el contexto de la empresa asignada.
+> - `CONTEXT.md` contiene el briefing de Nexova; `CONTEXT.es.md` es su versión en español. Mantén ambos sincronizados si cambias el contexto de empresa.
 > - No existe todavía un `AGENTS.md` en la raíz.
 > - Existe metadata del paquete compartido en `packages/shared/package.json` (`@repo/shared-types`), pero aún no hay runner de workspace en raíz.
 
@@ -65,11 +65,11 @@ Lee el `README.md` enlazado dentro de cada carpeta antes de empezar a programar 
 
 ### Archivos en la raíz
 
-| Ruta                         | Propósito                                                            | Qué haces aquí                                                                                               |
-| ---------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [`CONTEXT.md`](./CONTEXT.md) | Fuente única de verdad de tu empresa (Brasaland, TrackFlow o Nexova) | **Primer paso:** copia aquí el briefing de tu empresa para que apps, agentes y prompts usen el mismo dominio |
-| `docker-compose.yml`         | Orquestación local de todo el stack                                  | Mantener en la raíz del repo — conecta `services/`, bases de datos y otros contenedores desde un solo lugar  |
-| `README.md` / `README.es.md` | Esta guía                                                            | Orientación — estás aquí                                                                                     |
+| Ruta                         | Propósito                                                                                  | Qué haces aquí                                                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| [`CONTEXT.md`](./CONTEXT.md) | Briefing de empresa en inglés; [`CONTEXT.es.md`](./CONTEXT.es.md) es la versión en español | **Primer paso:** revisa el briefing y mantén sincronizadas ambas versiones para que apps, agentes y prompts usen el mismo dominio |
+| `docker-compose.yml`         | Orquestación local de todo el stack                                                        | Mantener en la raíz del repo — conecta `services/`, bases de datos y otros contenedores desde un solo lugar                       |
+| `README.md` / `README.es.md` | Esta guía                                                                                  | Orientación — estás aquí                                                                                                          |
 
 ### `uis/` — interfaces de usuario
 
@@ -269,7 +269,8 @@ Guía rápida de decisión:
 ```text
 ai-engineering-company-project-monorepo/
 ├── README.md / README.es.md   # Esta guía
-├── CONTEXT.md                 # ← Reemplazar con el briefing de tu empresa
+├── CONTEXT.md                 # Briefing de Nexova (inglés)
+├── CONTEXT.es.md              # Briefing de Nexova (español)
 ├── docker-compose.yml         # ← Orquestación local (raíz del repo)
 ├── uis/                       # Frontends (website, backoffice, dashboards)
 ├── services/                  # API FastAPI centralizada de la empresa
