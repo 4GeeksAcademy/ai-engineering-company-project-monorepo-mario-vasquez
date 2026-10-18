@@ -54,7 +54,7 @@ You are building **one company** across many milestones and projects. Each top-l
 > 💡 This repository currently provides a **base folder structure and documentation skeleton** only. It does not include runnable apps or global scripts yet.
 >
 > - `CONTEXT.md` contains the Nexova company briefing; `CONTEXT.es.md` is its Spanish counterpart. Keep both synchronized when changing company context.
-> - There is no root `AGENTS.md` yet.
+> - Root `AGENTS.md` defines the agent's session-start reading, pre-commit checks, and protected paths.
 > - Shared package metadata exists in `packages/shared/package.json` (`@repo/shared-types`), but no workspace runner is configured at root.
 
 ---
