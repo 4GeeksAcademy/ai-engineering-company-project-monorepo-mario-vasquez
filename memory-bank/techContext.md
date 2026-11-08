@@ -7,7 +7,7 @@ Este repositorio parte de una plantilla de monorepo con documentación y estruct
 ## Stack y arquitectura
 
 - **Backend:** la guía del repositorio recomienda una API centralizada con FastAPI, organizada por routers o módulos de dominio. Es una recomendación arquitectónica, no una implementación existente.
-- **Frontend:** las interfaces deben vivir en `uis/`; se contemplan, entre otras, una web pública y una aplicación interna. No se ha elegido framework de frontend.
+- **Frontend:** las interfaces deben vivir en `uis/`. Las dos aplicaciones canónicas del proyecto son `uis/website/` (sitio web corporativo público) y `uis/backoffice/` (aplicación interna para RR.HH., selección, soporte y ventas). Cualquier otra interfaz (portal de candidatos, portal de aprendizaje) también va dentro de `uis/`. No se ha elegido framework de frontend.
 - **Datos:** `data/` separa fuentes, pipelines, datos procesados y evaluación.
 - **IA:** `agents/` aloja agentes; `skills/` contiene capacidades reutilizables y `mcps/` integra herramientas y sistemas mediante MCP.
 - **Automatización y operaciones:** `workflows/` alberga orquestaciones; `infra/` y `scripts/` se reservan para infraestructura y utilidades.
