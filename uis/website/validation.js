@@ -318,12 +318,12 @@
   /**
    * SVG de icono de advertencia (triángulo con exclamación).
    */
-  var WARNING_ICON_SVG = '<svg class="h-4 w-4 flex-shrink-0 mt-0.5 text-red-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>';
+  var WARNING_ICON_SVG = '<svg class="h-4 w-4 flex-shrink-0 mt-0.5 text-red-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>';
 
   /**
    * SVG de icono de éxito (check dentro de un círculo verde).
    */
-  var SUCCESS_ICON_SVG = '<svg class="h-4 w-4 flex-shrink-0 mt-0.5 text-green-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>';
+  var SUCCESS_ICON_SVG = '<svg class="h-4 w-4 flex-shrink-0 mt-0.5 text-green-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>';
 
   /**
    * Crea o recupera el contenedor de feedback (error / éxito) para un campo.
@@ -337,7 +337,7 @@
       container = document.createElement('div');
       container.id = errorId;
       container.className = 'mt-2 items-start gap-2 rounded-md border-l-4 border-transparent bg-transparent px-3 py-2 text-sm hidden';
-      container.setAttribute('role', 'alert');
+      // role="alert" se asigna dinámicamente al mostrar el error (showFieldError)
       container.innerHTML = WARNING_ICON_SVG + '<span class="flex-1"></span>';
       field.parentNode.appendChild(container);
     }
@@ -360,6 +360,16 @@
     container.className = 'mt-2 flex items-start gap-2 rounded-md border-l-4 border-red-400 bg-red-50 px-3 py-2 text-sm text-red-700 animate-fade-in';
     container.setAttribute('role', 'alert');
     container.innerHTML = WARNING_ICON_SVG + '<span class="flex-1">' + escapeHtml(message) + '</span>';
+
+    // 3. ARIA: vincular el campo con su mensaje de error y marcarlo como inválido
+    field.setAttribute('aria-invalid', 'true');
+    // Preservar cualquier aria-describedby existente (hints) y añadir el contenedor de error
+    var existingDesc = field.getAttribute('aria-describedby');
+    var descIds = existingDesc ? existingDesc.split(/\s+/) : [];
+    if (descIds.indexOf(container.id) === -1) {
+      descIds.push(container.id);
+    }
+    field.setAttribute('aria-describedby', descIds.join(' '));
   }
 
   /**
@@ -372,7 +382,12 @@
     field.classList.remove('border-gray-300', 'hover:border-gray-400', 'border-red-400', 'focus:ring-red-400', 'focus:border-red-400');
     field.classList.remove('focus:ring-brand-500', 'focus:border-brand-500');
 
-    // 2. Feedback: mostrar check verde
+    // 2. ARIA: limpiar estado de error; el campo ya es válido
+    field.removeAttribute('aria-invalid');
+    // El contenedor ahora muestra éxito (role="status") pero sigue siendo
+    // información complementaria → se mantiene en aria-describedby
+
+    // 3. Feedback: mostrar check verde
     var container = getErrorContainer(field);
     container.className = 'mt-2 flex items-start gap-2 rounded-md border-l-4 border-green-400 bg-green-50 px-3 py-2 text-sm text-green-700 animate-fade-in';
     container.setAttribute('role', 'status');
@@ -389,9 +404,22 @@
     );
     field.classList.add('border-gray-300', 'hover:border-gray-400', 'focus:ring-brand-500', 'focus:border-brand-500');
 
+    // ARIA: limpiar estado de error
+    field.removeAttribute('aria-invalid');
+    // Eliminar solo la referencia al contenedor de error, preservando hints existentes
     var container = getErrorContainer(field);
+    var currentDesc = field.getAttribute('aria-describedby') || '';
+    var descIds = currentDesc.split(/\s+/).filter(function (id) {
+      return id !== container.id && id !== '';
+    });
+    if (descIds.length > 0) {
+      field.setAttribute('aria-describedby', descIds.join(' '));
+    } else {
+      field.removeAttribute('aria-describedby');
+    }
+
     container.className = 'mt-2 items-start gap-2 rounded-md border-l-4 border-transparent bg-transparent px-3 py-2 text-sm hidden';
-    container.setAttribute('role', 'alert');
+    container.removeAttribute('role');
     container.innerHTML = WARNING_ICON_SVG + '<span class="flex-1"></span>';
   }
 
@@ -520,7 +548,6 @@
       summary.id = summaryId;
       summary.className = 'mx-auto hidden';
       summary.setAttribute('role', 'alert');
-      summary.setAttribute('aria-live', 'polite');
       summary.setAttribute('tabindex', '-1');
       // Insertar al inicio del formulario, como primer hijo
       form.insertBefore(summary, form.firstElementChild);
@@ -587,7 +614,7 @@
         + '<p class="font-semibold">No se puede enviar el formulario</p>'
         + '<p class="mt-1">' + escapeHtml(msg) + '</p>'
         + '</div>'
-        + '<button type="button" class="flex-shrink-0 rounded-md p-1 text-red-500 hover:bg-red-100 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-400" onclick="this.parentElement.classList.add(\'hidden\')" aria-label="Cerrar">'
+        + '<button type="button" class="flex-shrink-0 rounded-md p-1 text-red-700 hover:bg-red-100 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-400" onclick="this.parentElement.classList.add(\'hidden\')" aria-label="Cerrar">'
         + '<svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>'
         + '</button>';
       summary.classList.remove('hidden');
@@ -787,19 +814,21 @@
     // Crear el contenedor del mensaje de éxito
     var successDiv = document.createElement('div');
     successDiv.id = successId;
-    successDiv.className = 'animate-fade-in mx-auto my-6 rounded-xl border-2 border-green-300 bg-gradient-to-br from-green-50 to-emerald-50 px-6 py-8 text-center shadow-lg';
+    successDiv.setAttribute('role', 'status');
+    successDiv.setAttribute('tabindex', '-1');
+    successDiv.className = 'animate-fade-in mx-auto my-6 rounded-xl border-2 border-green-300 bg-gradient-to-br from-green-50 to-emerald-50 px-6 py-8 text-center shadow-lg outline-none';
 
     successDiv.innerHTML = [
       '<div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">',
-      '  <svg class="h-8 w-8 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">',
+      '  <svg class="h-8 w-8 text-green-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">',
       '    <polyline points="20 6 9 17 4 12"/>',
       '  </svg>',
       '</div>',
       '<h3 class="text-xl font-bold text-green-800">¡Solicitud recibida en Nexova Solutions!</h3>',
       '<p class="mt-2 text-green-700">Hemos recibido tu información correctamente.</p>',
-      '<p class="mt-1 text-sm text-green-600">Nuestro equipo de talento revisará tu solicitud y te contactaremos en los próximos días.</p>',
+      '<p class="mt-1 text-sm text-green-700">Nuestro equipo de talento revisará tu solicitud y te contactaremos en los próximos días.</p>',
       '<hr class="mx-auto my-4 max-w-xs border-green-200">',
-      '<button type="button" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2" data-reset-form>',
+      '<button type="button" class="inline-flex items-center gap-2 rounded-lg bg-green-700 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2" data-reset-form>',
       '  <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">',
       '    <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>',
       '  </svg>',
@@ -815,6 +844,9 @@
     });
 
     form.insertBefore(successDiv, form.firstChild);
+
+    // Mover el foco al mensaje de éxito para que los lectores de pantalla lo anuncien
+    successDiv.focus({ preventScroll: true });
 
     // Evento para el botón "Nueva solicitud"
     var resetBtn = successDiv.querySelector('[data-reset-form]');

@@ -59,8 +59,14 @@
 </head>
 <body class="antialiased text-gray-900 bg-gray-50 min-h-screen flex flex-col">
 
+  <!-- ──── SKIP TO MAIN CONTENT ──── -->
+  <a href="#main-content"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:inline-flex focus:items-center focus:gap-2 focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none">
+    Saltar al contenido principal
+  </a>
+
   <!-- ──────── HEADER ──────── -->
-  <header role="banner" class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3.5 sm:py-3">
       <a href="/"
          class="flex items-center gap-2.5 no-underline text-gray-900 min-h-[44px]"
@@ -84,7 +90,7 @@
     </div>
   </header>
 
-  <main role="main" class="flex-1">
+  <main id="main-content" class="flex-1 outline-none" tabindex="-1">
 
     <!-- ──────── HERO ──────── -->
     <section aria-labelledby="app-title"
@@ -121,7 +127,7 @@
           <div class="w-full bg-gray-200 rounded-full h-2" aria-hidden="true">
             <div class="bg-brand-500 h-2 rounded-full w-1/4"></div>
           </div>
-          <ol class="flex justify-between mt-2 text-[11px] sm:text-xs text-gray-400 font-medium" aria-hidden="true">
+          <ol class="flex justify-between mt-2 text-[11px] sm:text-xs text-gray-500 font-medium" aria-hidden="true">
             <li class="text-brand-600"><span class="hidden sm:inline">Datos </span>personales</li>
             <li>Experiencia</li>
             <li>Documentos</li>
@@ -146,7 +152,7 @@
               <!-- Nombre -->
               <div class="sm:col-span-2">
                 <label for="app-nombre" class="block text-sm font-medium text-gray-700 mb-1">
-                  Nombre completo <span aria-hidden="true" class="text-red-500">*</span>
+                  Nombre completo <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <input type="text"
                        id="app-nombre"
@@ -155,15 +161,15 @@
                        autocomplete="name"
                        placeholder="Ej: Laura García Martínez"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
-                <p class="mt-1 text-xs text-gray-400" id="app-nombre-hint">Nombre y apellidos, tal como aparecen en tu DNI.</p>
+                <p class="mt-1 text-xs text-gray-500" id="app-nombre-hint">Nombre y apellidos, tal como aparecen en tu DNI.</p>
               </div>
 
               <!-- Email -->
               <div>
                 <label for="app-email" class="block text-sm font-medium text-gray-700 mb-1">
-                  Correo electrónico <span aria-hidden="true" class="text-red-500">*</span>
+                  Correo electrónico <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <input type="email"
                        id="app-email"
@@ -173,14 +179,14 @@
                        inputmode="email"
                        placeholder="correo@ejemplo.com"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
               </div>
 
               <!-- DNI / NIE / Pasaporte -->
               <div>
                 <label for="app-dni" class="block text-sm font-medium text-gray-700 mb-1">
-                  DNI / NIE / Pasaporte <span aria-hidden="true" class="text-red-500">*</span>
+                  DNI / NIE / Pasaporte <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <input type="text"
                        id="app-dni"
@@ -189,14 +195,14 @@
                        autocomplete="off"
                        placeholder="Ej: 12345678A"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
               </div>
 
               <!-- Teléfono -->
               <div>
                 <label for="app-telefono" class="block text-sm font-medium text-gray-700 mb-1">
-                  Teléfono <span aria-hidden="true" class="text-red-500">*</span>
+                  Teléfono <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <input type="tel"
                        id="app-telefono"
@@ -206,14 +212,14 @@
                        inputmode="tel"
                        placeholder="+34 600 000 000"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
               </div>
 
               <!-- País de residencia -->
               <div>
                 <label for="app-pais" class="block text-sm font-medium text-gray-700 mb-1">
-                  País de residencia <span aria-hidden="true" class="text-red-500">*</span>
+                  País de residencia <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <select id="app-pais"
                         name="pais"
@@ -242,14 +248,14 @@
                        autocomplete="address-level2"
                        placeholder="Ej: Valencia"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
               </div>
 
               <!-- Formación académica -->
               <fieldset class="sm:col-span-2 border-0 p-0 m-0 min-w-0">
                 <legend class="block text-sm font-medium text-gray-700 mb-1">
-                  Formación académica <span aria-hidden="true" class="text-red-500">*</span>
+                  Formación académica <span aria-hidden="true" class="text-red-700">*</span>
                 </legend>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <label for="app-formacion-nivel" class="sr-only">Nivel de formación</label>
@@ -276,7 +282,7 @@
                          required
                          placeholder="Titulación (ej: ADE)"
                          class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                                placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                                 focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
                   <label for="app-formacion-centro" class="sr-only">Centro o universidad</label>
                   <input type="text"
@@ -284,7 +290,7 @@
                          name="formacion-centro"
                          placeholder="Centro / Universidad"
                          class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                                placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                                 focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
                 </div>
               </fieldset>
@@ -322,7 +328,7 @@
               <!-- Puesto de interés -->
               <div class="sm:col-span-2">
                 <label for="app-puesto" class="block text-sm font-medium text-gray-700 mb-1">
-                  Puesto de interés <span aria-hidden="true" class="text-red-500">*</span>
+                  Puesto de interés <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <select id="app-puesto"
                         name="puesto"
@@ -367,7 +373,7 @@
               <!-- Nivel de experiencia -->
               <div>
                 <label for="app-experiencia" class="block text-sm font-medium text-gray-700 mb-1">
-                  Nivel de experiencia <span aria-hidden="true" class="text-red-500">*</span>
+                  Nivel de experiencia <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <select id="app-experiencia"
                         name="experiencia"
@@ -386,7 +392,7 @@
               <!-- Disponibilidad geográfica -->
               <div>
                 <label for="app-movilidad" class="block text-sm font-medium text-gray-700 mb-1">
-                  Disponibilidad geográfica <span aria-hidden="true" class="text-red-500">*</span>
+                  Disponibilidad geográfica <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <select id="app-movilidad"
                         name="movilidad"
@@ -407,7 +413,7 @@
               <!-- Disponibilidad temporal -->
               <div>
                 <label for="app-disponibilidad" class="block text-sm font-medium text-gray-700 mb-1">
-                  Disponibilidad temporal <span aria-hidden="true" class="text-red-500">*</span>
+                  Disponibilidad temporal <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <select id="app-disponibilidad"
                         name="disponibilidad"
@@ -439,7 +445,7 @@
                            inputmode="numeric"
                            placeholder="Mín (€)"
                            class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                                  placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                  placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                                   focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
                   </div>
                   <div>
@@ -452,17 +458,17 @@
                            inputmode="numeric"
                            placeholder="Máx (€)"
                            class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                                  placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                  placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                                   focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
                   </div>
                 </div>
-                <p class="mt-1 text-xs text-gray-400">Rango salarial bruto anual deseado (opcional, en euros).</p>
+                <p class="mt-1 text-xs text-gray-500">Rango salarial bruto anual deseado (opcional, en euros).</p>
               </fieldset>
 
               <!-- Habilidades principales (tags textuales) -->
               <div class="sm:col-span-2">
                 <label for="app-habilidades" class="block text-sm font-medium text-gray-700 mb-1">
-                  Habilidades principales <span aria-hidden="true" class="text-red-500">*</span>
+                  Habilidades principales <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <input type="text"
                        id="app-habilidades"
@@ -470,15 +476,15 @@
                        required
                        placeholder="Ej: Selección de personal, inglés C1, liderazgo, análisis de datos"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
-                <p class="mt-1 text-xs text-gray-400">Separa cada habilidad con una coma.</p>
+                <p class="mt-1 text-xs text-gray-500">Separa cada habilidad con una coma.</p>
               </div>
 
               <!-- Idiomas -->
               <fieldset class="sm:col-span-2 border-0 p-0 m-0 min-w-0">
                 <legend class="block text-sm font-medium text-gray-700 mb-1">
-                  Idiomas <span aria-hidden="true" class="text-red-500">*</span>
+                  Idiomas <span aria-hidden="true" class="text-red-700">*</span>
                 </legend>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <label for="app-idioma-principal" class="sr-only">Idioma principal</label>
@@ -532,7 +538,7 @@
                     </select>
                   </div>
                 </div>
-                <p class="mt-1 text-xs text-gray-400">Selecciona tu idioma principal y nivel según el marco común europeo (MCER).</p>
+                <p class="mt-1 text-xs text-gray-500">Selecciona tu idioma principal y nivel según el marco común europeo (MCER).</p>
               </fieldset>
 
               <!-- Mensaje / carta de presentación -->
@@ -545,9 +551,9 @@
                           rows="5"
                           placeholder="Cuéntanos por qué quieres trabajar en Nexova, tu experiencia relevante y lo que te hace único..."
                           class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                                 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                                  focus:border-brand-500 transition-colors bg-white hover:border-gray-400 resize-y"></textarea>
-                <p class="mt-1 text-xs text-gray-400">Máximo 3000 caracteres. Opcional, pero muy recomendado.</p>
+                <p class="mt-1 text-xs text-gray-500">Máximo 3000 caracteres. Opcional, pero muy recomendado.</p>
               </div>
 
             </div>
@@ -565,7 +571,7 @@
               <!-- CV -->
               <div>
                 <label for="app-cv" class="block text-sm font-medium text-gray-700 mb-1">
-                  Currículum vitae (CV) <span aria-hidden="true" class="text-red-500">*</span>
+                  Currículum vitae (CV) <span aria-hidden="true" class="text-red-700">*</span>
                 </label>
                 <div class="relative">
                   <input type="file"
@@ -580,7 +586,7 @@
                                 file:cursor-pointer file:transition-colors cursor-pointer
                                 focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
                 </div>
-                <p class="mt-1 text-xs text-gray-400" id="app-cv-hint">PDF, DOC o DOCX. Máximo 10 MB.</p>
+                <p class="mt-1 text-xs text-gray-500" id="app-cv-hint">PDF, DOC o DOCX. Máximo 10 MB.</p>
               </div>
 
               <!-- Carta de recomendación (opcional) -->
@@ -600,7 +606,7 @@
                                 file:cursor-pointer file:transition-colors cursor-pointer
                                 focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
                 </div>
-                <p class="mt-1 text-xs text-gray-400" id="app-recom-hint">Opcional. PDF, DOC o imagen. Máximo 10 MB.</p>
+                <p class="mt-1 text-xs text-gray-500" id="app-recom-hint">Opcional. PDF, DOC o imagen. Máximo 10 MB.</p>
               </div>
 
               <!-- LinkedIn -->
@@ -612,7 +618,7 @@
                        inputmode="url"
                        placeholder="https://linkedin.com/in/tu-perfil"
                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                               focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
               </div>
 
@@ -624,9 +630,9 @@
                           rows="3"
                           placeholder="Nombre, cargo, empresa y contacto de 2-3 personas que puedan referenciar tu trabajo. Ej: María López, Directora de RRHH en TechCorp, maria@techcorp.com"
                           class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                                 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500
                                  focus:border-brand-500 transition-colors bg-white hover:border-gray-400 resize-y"></textarea>
-                <p class="mt-1 text-xs text-gray-400">Opcional, pero acelera el proceso de verificación.</p>
+                <p class="mt-1 text-xs text-gray-500">Opcional, pero acelera el proceso de verificación.</p>
               </div>
 
             </div>
@@ -648,7 +654,7 @@
                   He leído y acepto la
                   <a href="/privacidad" class="text-brand-500 underline hover:text-brand-700 transition-colors">política de privacidad</a>
                   y autorizo a Nexova Solutions a tratar mis datos personales con la finalidad de gestionar mi candidatura.
-                  <span aria-hidden="true" class="text-red-500">*</span>
+                  <span aria-hidden="true" class="text-red-700">*</span>
                 </span>
               </label>
 
@@ -691,8 +697,8 @@
             </button>
           </div>
 
-          <p class="mt-4 text-xs text-gray-400 text-center">
-            <span aria-hidden="true" class="text-red-500">*</span> Campos obligatorios.
+          <p class="mt-4 text-xs text-gray-500 text-center">
+            <span aria-hidden="true" class="text-red-700">*</span> Campos obligatorios.
             Tus datos se tratarán conforme a nuestra
             <a href="/privacidad" class="text-brand-500 underline hover:text-brand-700 transition-colors">política de privacidad</a>.
           </p>
@@ -705,7 +711,7 @@
   </main>
 
   <!-- ──────── FOOTER ──────── -->
-  <footer role="contentinfo"
+  <footer
           class="bg-white border-t border-gray-200 px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
       <p class="text-xs sm:text-sm text-gray-500">
