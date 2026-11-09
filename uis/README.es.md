@@ -5,7 +5,9 @@ Esta carpeta contiene **todos los proyectos con interfaz de usuario** para el pr
 Los dos proyectos principales que se almacenan aquí son:
 
 - **`website`** — la presencia web pública de la compañía.
-- **`backoffice`** — la aplicación interna de administración. Es el lugar ideal para desarrollar múltiples soluciones dentro de un mismo proyecto: autenticación, gestión de personas, gestión de operaciones, comunicación interna y otras capacidades de back-office.
+- **`website`** — la presencia web pública de la compañía.  
+  **Ejecutar localmente:** `npx serve uis/website -l 3000` (o `cd uis/website && npm run dev`).  
+  Compatible con Codespaces — sin paso de build necesario, el puerto 3000 se reenvía automáticamente.
 
 Organiza `uis/` por **distintas áreas de la compañía** — cada subcarpeta agrupa un ámbito diferente (por ejemplo, web pública frente a operaciones internas) e incluye su propia documentación técnica y funcional.
 

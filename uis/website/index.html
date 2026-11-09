@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" itemprop="description" content="Nexova Solutions — Consultoría de Recursos Humanos y Adquisición de Talento. Headhunting ejecutivo, externalización de atención al cliente y capacitación corporativa.">
+  <meta name="keywords" content="Nexova, RRHH, headhunting, talento, selección, capacitación, atención al cliente, Valencia, Miami">
+  <meta name="author" content="Nexova Solutions">
+  <meta property="og:title" content="Nexova Solutions — Talento que impulsa tu negocio">
+  <meta property="og:description" content="Consultoría de RRHH y adquisición de talento con sede en Valencia y oficina en Miami. Más de 12 años de experiencia.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <title>Nexova Solutions — Talento que impulsa tu negocio</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+            },
+          },
+          animation: {
+            'fade-in': 'fade-in 0.2s ease-out',
+          },
+          keyframes: {
+            'fade-in': {
+              'from': { opacity: '0', transform: 'translateY(-4px)' },
+              'to': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <script src="/validation.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://nexova.com/#organization",
+    "name": "Nexova Solutions",
+    "url": "https://nexova.com",
+    "description": "Consultoría de Recursos Humanos y Adquisición de Talento. Headhunting ejecutivo, externalización de atención al cliente y capacitación corporativa.",
+    "foundingDate": "2011",
+    "numberOfEmployees": "120",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      }
+    },
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Sede Europa",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Valencia",
+          "addressCountry": "ES"
+        }
+      },
+      {
+        "@type": "Place",
+        "name": "Oficina América",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Miami",
+          "addressRegion": "Florida",
+          "addressCountry": "US"
+        }
+      }
+    ],
+    "email": "contacto@nexova.com",
+    "areaServed": ["ES", "US"],
+    "knowsAbout": [
+      "Headhunting ejecutivo y de mandos medios",
+      "Externalización de atención al cliente",
+      "Capacitación corporativa"
+    ],
+    "sameAs": [
+      "https://linkedin.com/company/nexova-solutions"
+    ]
+  }
+  </script>
+</head>
+<body itemscope itemtype="https://schema.org/Organization" class="antialiased text-gray-900 bg-white">
+
+  <!-- ──────── HEADER ──────── -->
+  <header role="banner" class="sticky top-0 z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-3.5 sm:py-3 bg-white border-b border-gray-200">
+    <a href="/"
+       itemprop="url"
+       class="flex items-center gap-2.5 no-underline text-gray-900 hover:text-gray-900 min-h-[44px]"
+       aria-label="Nexova Solutions — Inicio">
+      <img src="/assets/logo.svg"
+           alt="Logotipo de Nexova Solutions"
+           itemprop="logo"
+           width="36"
+           height="36"
+           class="shrink-0"
+           onerror="this.style.display='none'">
+      <span class="text-xl font-bold tracking-tight select-none">
+        <span itemprop="name">Nexova</span> <span class="text-brand-500 not-italic">Solutions</span>
+      </span>
+    </a>
+
+    <!-- Botón hamburguesa (móvil) -->
+    <button type="button"
+            id="menu-toggle"
+            class="md:hidden inline-flex items-center justify-center rounded-lg p-2 min-w-[44px] min-h-[44px] text-gray-600
+                   hover:bg-gray-100 focus-visible:outline focus-visible:outline-2
+                   focus-visible:outline-brand-500 transition-colors"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación">
+      <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+           id="menu-icon-open">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+      </svg>
+      <svg class="w-6 h-6 hidden" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+           id="menu-icon-close">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <nav id="nav-menu"
+         aria-label="Navegación principal"
+         class="hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg p-4 mt-0
+                md:flex md:items-center md:static md:bg-transparent md:border-none md:shadow-none md:p-0">
+      <ul role="list" class="flex flex-col md:flex-row items-stretch md:items-center gap-1 md:gap-6 list-none m-0 p-0">
+        <li><a href="#servicios"
+           class="block rounded-lg px-3 py-3 md:px-0 md:py-0
+                  text-sm sm:text-[15px] font-medium text-gray-600 no-underline
+                  md:pb-1 md:border-b-2 md:border-transparent
+                  hover:bg-gray-50 md:hover:bg-transparent
+                  hover:text-brand-500 md:hover:border-brand-500 transition-colors">Servicios</a></li>
+        <li><a href="#nosotros"
+           class="block rounded-lg px-3 py-3 md:px-0 md:py-0
+                  text-sm sm:text-[15px] font-medium text-gray-600 no-underline
+                  md:pb-1 md:border-b-2 md:border-transparent
+                  hover:bg-gray-50 md:hover:bg-transparent
+                  hover:text-brand-500 md:hover:border-brand-500 transition-colors">Nosotros</a></li>
+        <li><a href="#casos-de-exito"
+           class="block rounded-lg px-3 py-3 md:px-0 md:py-0
+                  text-sm sm:text-[15px] font-medium text-gray-600 no-underline
+                  md:pb-1 md:border-b-2 md:border-transparent
+                  hover:bg-gray-50 md:hover:bg-transparent
+                  hover:text-brand-500 md:hover:border-brand-500 transition-colors">Casos de éxito</a></li>
+        <li><a href="#contacto"
+           class="block rounded-lg px-3 py-3 md:px-0 md:py-0
+                  text-sm sm:text-[15px] font-medium text-gray-600 no-underline
+                  md:pb-1 md:border-b-2 md:border-transparent
+                  hover:bg-gray-50 md:hover:bg-transparent
+                  hover:text-brand-500 md:hover:border-brand-500 transition-colors">Contacto</a></li>
+        <li><a href="/application.html"
+           class="block rounded-lg bg-brand-500 px-4 py-3 md:py-2.5 text-sm font-semibold text-white no-underline
+                  hover:bg-brand-600 transition-colors shadow-sm text-center min-h-[44px] flex items-center justify-center">Trabaja con nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <!-- ──────── HERO ──────── -->
+    <section id="hero"
+             aria-labelledby="hero-title"
+             class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-white px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24 md:py-28 lg:py-40">
+      <!-- Decoración de fondo -->
+      <div class="absolute inset-0 -z-0 opacity-20 md:opacity-30" aria-hidden="true">
+        <div class="absolute top-10 left-1/4 w-64 h-64 sm:w-72 sm:h-72 bg-brand-200 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-1/4 w-80 h-80 sm:w-96 sm:h-96 bg-blue-100 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <span class="inline-block rounded-full bg-brand-100 px-3 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-brand-700 uppercase tracking-wider mb-4 sm:mb-6">
+          Consultoría de RRHH y Adquisición de Talento
+        </span>
+
+        <h1 id="hero-title"
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+          El talento adecuado<br>
+          <span class="text-brand-500">transforma tu negocio</span>
+        </h1>
+
+        <p itemprop="description" class="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          Desde 2011 conectamos empresas medianas de tecnología, retail y finanzas con el
+          talento que necesitan para escalar. <strong>Headhunting ejecutivo</strong>,
+          <strong>externalización de atención al cliente</strong> y
+          <strong>capacitación corporativa</strong> diseñados para resultados reales.
+        </p>
+
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a href="#contacto"
+             aria-label="Solicitar una consultoría"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500 px-6 sm:px-8 py-3.5 sm:py-3.5 text-sm sm:text-base font-semibold text-white min-h-[44px]
+                    shadow-md hover:bg-brand-600 focus-visible:outline focus-visible:outline-2
+                    focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-colors">
+            Solicitar consultoría
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#servicios"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 sm:px-8 py-3.5 sm:py-3.5 text-sm sm:text-base font-semibold text-gray-700 min-h-[44px]
+                    hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                    focus-visible:outline-gray-400 transition-colors">
+            Ver servicios
+          </a>
+          <a href="/application.html"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand-500 bg-white px-6 sm:px-8 py-3.5 sm:py-3.5 text-sm sm:text-base font-semibold text-brand-600 min-h-[44px]
+                    hover:bg-brand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                    focus-visible:outline-brand-500 transition-colors">
+            ¿Eres candidato?
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Métricas clave -->
+      <dl class="relative z-10 mt-12 sm:mt-16 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div class="text-center">
+          <dt class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-500">12+</dt>
+          <dd class="mt-1 text-xs sm:text-sm text-gray-500 font-medium ml-0">años de experiencia</dd>
+        </div>
+        <div class="text-center">
+          <dt class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-500">120</dt>
+          <dd class="mt-1 text-xs sm:text-sm text-gray-500 font-medium ml-0">profesionales</dd>
+        </div>
+        <div class="text-center">
+          <dt class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-500">8M</dt>
+          <dd class="mt-1 text-xs sm:text-sm text-gray-500 font-medium ml-0">USD en ingresos anuales</dd>
+        </div>
+        <div class="text-center">
+          <dt class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-500">2</dt>
+          <dd class="mt-1 text-xs sm:text-sm text-gray-500 font-medium ml-0">países (España y EE.UU.)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ──────── SERVICIOS ──────── -->
+    <section id="servicios"
+             aria-labelledby="servicios-title"
+             class="scroll-mt-16 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-7xl mx-auto">
+        <h2 id="servicios-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          Servicios
+        </h2>
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 text-center max-w-2xl mx-auto">
+          Ofrecemos soluciones integrales de talento para empresas medianas en tecnología,
+          comercio minorista y servicios financieros.
+        </p>
+
+        <div class="mt-8 sm:mt-10 md:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          <article aria-labelledby="servicio-headhunting-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm
+                          hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-brand-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-500" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+            </div>
+            <h3 id="servicio-headhunting-title" class="text-xl font-semibold text-gray-900">
+              Headhunting ejecutivo y de mandos medios
+            </h3>
+            <p class="mt-3 text-gray-600 leading-relaxed">
+              Procesos de selección llave en mano: desde la reunión inicial hasta la contratación.
+              Perfiles ejecutivos, gerenciales y técnicos especializados con SLA por tipo de búsqueda.
+            </p>
+            <a href="/servicios/headhunting"
+               aria-label="Más información sobre headhunting ejecutivo"
+               class="mt-4 inline-flex items-center gap-1 text-brand-500 font-medium text-sm py-2
+                      hover:text-brand-700 transition-colors">
+              Saber más
+              <svg class="w-4 h-4 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            </a>
+          </article>
+
+          <article aria-labelledby="servicio-soporte-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm
+                          hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-brand-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-500" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </div>
+            <h3 id="servicio-soporte-title" class="text-xl font-semibold text-gray-900">
+              Externalización de atención al cliente
+            </h3>
+            <p class="mt-3 text-gray-600 leading-relaxed">
+              Equipos de soporte dedicados para empresas tecnológicas, retail y finanzas.
+              Atención multicanal con agentes experimentados y cobertura en español e inglés.
+            </p>
+            <a href="/servicios/atencion-al-cliente"
+               aria-label="Más información sobre externalización de atención al cliente"
+               class="mt-4 inline-flex items-center gap-1 text-brand-500 font-medium text-sm py-2
+                      hover:text-brand-700 transition-colors">
+              Saber más
+              <svg class="w-4 h-4 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            </a>
+          </article>
+
+          <article aria-labelledby="servicio-capacitacion-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm
+                          hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-brand-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-500" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+            </div>
+            <h3 id="servicio-capacitacion-title" class="text-xl font-semibold text-gray-900">
+              Capacitación corporativa
+            </h3>
+            <p class="mt-3 text-gray-600 leading-relaxed">
+              Programas de formación en liderazgo, comunicación, gestión de equipos y habilidades
+              interpersonales. Modalidades presencial, online y semipresencial para grupos de hasta 15 personas.
+            </p>
+            <a href="/servicios/capacitacion"
+               aria-label="Más información sobre capacitación corporativa"
+               class="mt-4 inline-flex items-center gap-1 text-brand-500 font-medium text-sm py-2
+                      hover:text-brand-700 transition-colors">
+              Saber más
+              <svg class="w-4 h-4 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────── NOSOTROS ──────── -->
+    <section id="nosotros"
+             aria-labelledby="nosotros-title"
+             class="scroll-mt-16 bg-gray-50 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="nosotros-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          Nosotros
+        </h2>
+        <div class="mt-6 sm:mt-8 max-w-3xl mx-auto space-y-4 sm:space-y-5 text-gray-600 text-base sm:text-lg leading-relaxed">
+          <p>
+            Fundada en <strong>2011</strong> en Valencia, España, Nexova Solutions es una firma
+            de consultoría de RRHH y adquisición de talento con <strong>120 empleados</strong>
+            y presencia en dos países.
+          </p>
+          <p>
+            Ayudamos a empresas medianas a encontrar, desarrollar y retener el talento que
+            marca la diferencia. Nuestra experiencia de doce años en selección, capacitación
+            y soporte nos permite ofrecer soluciones que realmente funcionan.
+          </p>
+        </div>
+
+        <aside aria-labelledby="datos-clave-title"
+               class="mt-8 sm:mt-10 max-w-2xl mx-auto rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm">
+          <h3 id="datos-clave-title" class="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6 text-center">
+            Datos clave
+          </h3>
+          <dl class="grid grid-cols-1 sm:grid-cols-3 gap-y-4 gap-x-6 text-center">
+            <div>
+              <dt class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">Fundación</dt>
+              <dd class="mt-1 text-lg sm:text-xl font-bold text-gray-900" itemprop="foundingDate">2011</dd>
+            </div>
+            <div>
+              <dt class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">Sede</dt>
+              <dd class="mt-1 text-lg sm:text-xl font-bold text-gray-900">Valencia, España</dd>
+            </div>
+            <div>
+              <dt class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">Oficina</dt>
+              <dd class="mt-1 text-lg sm:text-xl font-bold text-gray-900">Miami, Florida</dd>
+            </div>
+            <div>
+              <dt class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">Equipo</dt>
+              <dd class="mt-1 text-lg sm:text-xl font-bold text-gray-900" itemprop="numberOfEmployees">120</dd>
+            </div>
+            <div class="sm:col-span-2">
+              <dt class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">Clientes</dt>
+              <dd class="mt-1 text-lg sm:text-xl font-bold text-gray-900">Tecnología, retail, finanzas</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ──────── CASOS DE ÉXITO ──────── -->
+    <section id="casos-de-exito"
+             aria-labelledby="casos-title"
+             class="scroll-mt-16 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-7xl mx-auto">
+        <h2 id="casos-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          Casos de éxito
+        </h2>
+        <div class="mt-8 sm:mt-10 md:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          <article aria-labelledby="caso1-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <span class="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 mb-4">−40 % tiempo</span>
+            <h3 id="caso1-title" class="text-lg font-semibold text-gray-900">
+              Reducción del 40 % en tiempo de contratación
+            </h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Una empresa tecnológica redujo su tiempo medio de contratación de 10 a 6 semanas
+              tras implementar nuestro proceso de selección especializada para perfiles técnicos.
+            </p>
+          </article>
+
+          <article aria-labelledby="caso2-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <span class="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 mb-4">+30 % resolución</span>
+            <h3 id="caso2-title" class="text-lg font-semibold text-gray-900">
+              Mejora del 30 % en resolución de soporte
+            </h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Un cliente de retail externalizó su atención al cliente con Nexova y logró cumplir
+              el SLA de 24 horas de resolución por primera vez en dos años.
+            </p>
+          </article>
+
+          <article aria-labelledby="caso3-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <span class="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 mb-4">−25 % rotación</span>
+            <h3 id="caso3-title" class="text-lg font-semibold text-gray-900">
+              Formación que mejoró la retención de talento
+            </h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Un programa de capacitación en liderazgo para mandos medios redujo la rotación
+              voluntaria en un 25 % durante el primer año.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────── CÓMO FUNCIONA ──────── -->
+    <section id="como-funciona"
+             aria-labelledby="como-funciona-title"
+             class="scroll-mt-16 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="como-funciona-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          Cómo funciona
+        </h2>
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 text-center max-w-2xl mx-auto">
+          Un proceso probado que cubre cada etapa, desde el diagnóstico inicial hasta
+          la medición de resultados.
+        </p>
+
+        <div class="mt-10 sm:mt-14 relative">
+          <!-- Línea conectora vertical (todos los tamaños) -->
+          <div class="absolute left-5 top-2 bottom-2 w-0.5 bg-brand-200 md:left-1/2 md:-translate-x-1/2" aria-hidden="true"></div>
+
+          <ol class="relative space-y-10 sm:space-y-12 list-none m-0 p-0">
+
+            <!-- Paso 1 -->
+            <li class="md:flex items-center gap-12 relative">
+              <div class="relative pl-14 md:pl-0 md:w-1/2 md:text-right">
+                <span class="absolute left-0 top-0 md:relative md:inline-flex
+                             inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-500 text-white font-bold text-sm
+                             md:mb-3 z-10" aria-hidden="true">1</span>
+                <h3 class="text-xl font-semibold text-gray-900">Diagnóstico y análisis</h3>
+                <p class="mt-2 text-gray-600 leading-relaxed max-w-md md:ml-auto">
+                  Nos reunimos contigo para entender tu negocio, tus necesidades de talento
+                  y los objetivos que quieres alcanzar. Definimos perfiles, plazos y métricas
+                  de éxito antes de empezar.
+                </p>
+              </div>
+              <div class="hidden md:block w-1/2"></div>
+            </li>
+
+            <!-- Paso 2 -->
+            <li class="md:flex items-center gap-12 relative">
+              <div class="hidden md:block w-1/2"></div>
+              <div class="relative pl-14 md:pl-0 md:w-1/2">
+                <span class="absolute left-0 top-0 md:relative md:inline-flex
+                             inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-500 text-white font-bold text-sm
+                             md:mb-3 z-10" aria-hidden="true">2</span>
+                <h3 class="text-xl font-semibold text-gray-900">Ejecución y seguimiento</h3>
+                <p class="mt-2 text-gray-600 leading-relaxed max-w-md">
+                  Ponemos en marcha el plan: búsqueda y selección de candidatos, formación
+                  de equipos de soporte o diseño del programa de capacitación. Te mantenemos
+                  informado con informes de progreso periódicos.
+                </p>
+              </div>
+            </li>
+
+            <!-- Paso 3 -->
+            <li class="md:flex items-center gap-12 relative">
+              <div class="relative pl-14 md:pl-0 md:w-1/2 md:text-right">
+                <span class="absolute left-0 top-0 md:relative md:inline-flex
+                             inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-500 text-white font-bold text-sm
+                             md:mb-3 z-10" aria-hidden="true">3</span>
+                <h3 class="text-xl font-semibold text-gray-900">Entrega y garantía</h3>
+                <p class="mt-2 text-gray-600 leading-relaxed max-w-md md:ml-auto">
+                  Entregamos resultados medibles. En selección, garantía de reemplazo gratis
+                  durante 6 meses. En soporte, equipos formados y operativos. En capacitación,
+                  programas completos con evaluación de impacto.
+                </p>
+              </div>
+              <div class="hidden md:block w-1/2"></div>
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────── POR QUÉ NEXOVA ──────── -->
+    <section id="por-que-nexova"
+             aria-labelledby="por-que-nexova-title"
+             class="scroll-mt-16 bg-gray-50 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-7xl mx-auto">
+        <h2 id="por-que-nexova-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          ¿Por qué Nexova?
+        </h2>
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 text-center max-w-2xl mx-auto">
+          Doce años de experiencia nos respaldan. Estos son los motivos por los que nuestros
+          clientes confían en nosotros.
+        </p>
+
+        <div class="mt-8 sm:mt-10 md:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          <article aria-labelledby="razon1-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            </div>
+            <h3 id="razon1-title" class="text-lg font-semibold text-gray-900">Experiencia contrastada</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Más de 12 años en el mercado, 120 profesionales y 8M USD de ingresos anuales
+              avalan nuestra capacidad para gestionar talento a escala.
+            </p>
+          </article>
+
+          <article aria-labelledby="razon2-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+            </div>
+            <h3 id="razon2-title" class="text-lg font-semibold text-gray-900">Equipo multidisciplinar</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Consultores de selección, formadores, agentes de soporte y account managers
+              trabajan coordinados para darte una solución integral.
+            </p>
+          </article>
+
+          <article aria-labelledby="razon3-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            </div>
+            <h3 id="razon3-title" class="text-lg font-semibold text-gray-900">Resultados con SLA</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Trabajamos con niveles de servicio definidos: plazos de contratación por tipo
+              de perfil, tiempo de resolución en soporte de 24 h y programas de capacitación
+              con impacto medible.
+            </p>
+          </article>
+
+          <article aria-labelledby="razon4-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+            </div>
+            <h3 id="razon4-title" class="text-lg font-semibold text-gray-900">Presencia internacional</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Con oficinas en Valencia y Miami, ofrecemos cobertura en España y EE.UU.,
+              con capacidad para gestionar talento en mercados transfronterizos.
+            </p>
+          </article>
+
+          <article aria-labelledby="razon5-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.833.23-.85 2.124M5.17 6.73 6.02 4.6m12.2 12.768-.85 2.124M5.17 17.27l.85-2.124"/></svg>
+            </div>
+            <h3 id="razon5-title" class="text-lg font-semibold text-gray-900">Especialización sectorial</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Nos enfocamos en tecnología, retail y servicios financieros. Conocemos las
+              necesidades concretas de cada sector y los perfiles que realmente funcionan.
+            </p>
+          </article>
+
+          <article aria-labelledby="razon6-title"
+                   class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+            </div>
+            <h3 id="razon6-title" class="text-lg font-semibold text-gray-900">Garantía de calidad</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Todos nuestros servicios incluyen garantía: reemplazo gratis en headhunting
+              durante 6 meses, equipos de soporte con SLA y programas de capacitación
+              con evaluación de satisfacción.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────── APLICA ──────── -->
+    <section id="aplica"
+             aria-labelledby="aplica-title"
+             class="scroll-mt-16 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-4xl mx-auto">
+        <h2 id="aplica-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          ¿Eres candidato?
+        </h2>
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 text-center max-w-xl mx-auto">
+          Únete a Nexova Solutions. Déjanos tu información y forma parte de nuestra
+          red de talento para procesos de selección en tecnología, retail y finanzas.
+        </p>
+
+        <form action="/api/aplica"
+              method="POST"
+              enctype="multipart/form-data"
+              aria-label="Formulario de aplicación para candidatos"
+              class="mt-8 sm:mt-10 rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm max-w-xl mx-auto space-y-4 sm:space-y-6">
+
+          <fieldset class="border-0 p-0 m-0 min-w-0">
+            <legend class="text-base font-semibold text-gray-900 mb-4">
+              Tus datos
+            </legend>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 sm:mb-6">
+
+          <div class="sm:col-span-2">
+            <label for="aplica-nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo <span aria-hidden="true" class="text-red-500">*</span></label>
+            <input type="text" id="aplica-nombre" name="nombre" required autocomplete="name" inputmode="text" placeholder="Tu nombre"
+                   class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                          placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                          transition-colors bg-white hover:border-gray-400">
+          </div>
+
+          <div>
+            <label for="aplica-email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico <span aria-hidden="true" class="text-red-500">*</span></label>
+            <input type="email" id="aplica-email" name="email" required autocomplete="email" inputmode="email" placeholder="correo@ejemplo.com"
+                   class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                          placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                          transition-colors bg-white hover:border-gray-400">
+          </div>
+
+          <div>
+            <label for="aplica-telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+            <input type="tel" id="aplica-telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="+34 600 000 000"
+                   class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                          placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                          transition-colors bg-white hover:border-gray-400">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="aplica-puesto" class="block text-sm font-medium text-gray-700 mb-1">Puesto de interés <span aria-hidden="true" class="text-red-500">*</span></label>
+            <select id="aplica-puesto" name="puesto" required
+                    class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                           transition-colors bg-white hover:border-gray-400">
+              <option value="" class="text-gray-400">Selecciona un área</option>
+              <option value="headhunting">Consultor de selección de talento</option>
+              <option value="atencion-cliente">Agente de atención al cliente</option>
+              <option value="capacitacion">Formador corporativo</option>
+              <option value="ventas">Ejecutivo de ventas / SDR</option>
+              <option value="marketing">Marketing y comunicaciones</option>
+              <option value="tecnologia">Tecnología e infraestructura</option>
+              <option value="rh">Recursos Humanos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="aplica-cv" class="block text-sm font-medium text-gray-700 mb-1">
+              Adjuntar CV <span aria-hidden="true" class="text-red-500">*</span> <span class="text-gray-400 font-normal">(PDF, DOC o DOCX)</span>
+            </label>
+            <input type="file" id="aplica-cv" name="cv" accept=".pdf,.doc,.docx" required
+                   class="block w-full text-sm text-gray-500 file:mr-2 sm:file:mr-4 file:py-3 file:px-3 sm:file:px-4 file:min-h-[44px]
+                          file:rounded-lg file:border-0 file:text-xs sm:file:text-sm file:font-semibold
+                          file:bg-brand-50 file:text-brand-600 hover:file:bg-brand-100
+                          file:cursor-pointer file:transition-colors cursor-pointer
+                          focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="aplica-mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+            <textarea id="aplica-mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu experiencia y motivación..."
+                      class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                             placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                             transition-colors bg-white hover:border-gray-400 resize-y"></textarea>
+          </div>
+
+          <div class="sm:col-span-2 pt-2 border-t border-gray-100">
+            <p class="text-xs sm:text-sm text-gray-500 text-center mb-4">
+              ¿Buscas un formulario más completo?
+              <a href="/application.html" class="text-brand-500 font-semibold hover:text-brand-700 underline">Solicitud detallada →</a>
+            </p>
+          </div>
+
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+          <button type="submit"
+                  class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500
+                         px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white min-h-[48px]
+                         shadow-md hover:bg-brand-600 focus-visible:outline focus-visible:outline-2
+                         focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-colors cursor-pointer">
+            Enviar candidatura
+          </button>
+          <button type="button"
+                  onclick="this.closest('form').reset()"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300
+                         bg-white px-6 py-3.5 text-sm font-semibold text-gray-700 min-h-[48px]
+                         hover:bg-gray-50 focus-visible:outline focus-visible:outline-2
+                         focus-visible:outline-offset-2 focus-visible:outline-gray-400 transition-colors cursor-pointer">
+            <svg class="w-5 h-5 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/>
+            </svg>
+            Limpiar
+          </button>
+          </div>
+
+          <p class="text-xs text-gray-400 text-center">
+            <span aria-hidden="true" class="text-red-500">*</span> Campos obligatorios
+          </p>
+
+          <p class="text-xs text-gray-400 text-center">
+            Al enviar tus datos, aceptas nuestra
+            <a href="/privacidad" class="text-brand-500 hover:text-brand-700 underline">política de privacidad</a>.
+          </p>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!-- ──────── CONTACTO ──────── -->
+    <section id="contacto"
+             aria-labelledby="contacto-title"
+             class="scroll-mt-16 bg-gray-50 px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+      <div class="max-w-4xl mx-auto">
+        <h2 id="contacto-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center text-gray-900">
+          Contacto
+        </h2>
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 text-center max-w-xl mx-auto">
+          Háblanos de tu proyecto y te propondremos la solución de talento que mejor se adapta
+          a tus necesidades.
+        </p>
+
+        <form action="/api/contacto"
+              method="POST"
+              aria-label="Formulario de contacto"
+              class="mt-8 sm:mt-10 rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm max-w-xl mx-auto space-y-4 sm:space-y-6">
+
+          <fieldset class="border-0 p-0 m-0 min-w-0">
+            <legend class="text-base font-semibold text-gray-900 mb-4">
+              Información de contacto
+            </legend>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 sm:mb-6">
+
+          <div>
+            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo <span aria-hidden="true" class="text-red-500">*</span></label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" inputmode="text" placeholder="Tu nombre"
+                   class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                          placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                          transition-colors bg-white hover:border-gray-400">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico <span aria-hidden="true" class="text-red-500">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="correo@empresa.com"
+                   class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                          placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                          transition-colors bg-white hover:border-gray-400">
+          </div>
+
+          <div>
+            <label for="empresa" class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
+            <input type="text" id="empresa" name="empresa" autocomplete="organization" inputmode="text" placeholder="Nombre de tu empresa"
+                   class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                          placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                          transition-colors bg-white hover:border-gray-400">
+          </div>
+
+          <div>
+            <label for="servicio-interes" class="block text-sm font-medium text-gray-700 mb-1">Servicio de interés <span aria-hidden="true" class="text-red-500">*</span></label>
+            <select id="servicio-interes" name="servicio" required
+                    class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                           transition-colors bg-white hover:border-gray-400">
+              <option value="" class="text-gray-400">Selecciona un servicio</option>
+              <option value="headhunting">Headhunting ejecutivo</option>
+              <option value="atencion-cliente">Externalización de atención al cliente</option>
+              <option value="capacitacion">Capacitación corporativa</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje <span aria-hidden="true" class="text-red-500">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."
+                      class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                             placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                             transition-colors bg-white hover:border-gray-400 resize-y"></textarea>
+          </div>
+
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+          <button type="submit"
+                  class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500
+                         px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white min-h-[48px]
+                         shadow-md hover:bg-brand-600 focus-visible:outline focus-visible:outline-2
+                         focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-colors cursor-pointer">
+            Enviar mensaje
+          </button>
+          <button type="button"
+                  onclick="this.closest('form').reset()"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300
+                         bg-white px-6 py-3.5 text-sm font-semibold text-gray-700 min-h-[48px]
+                         hover:bg-gray-50 focus-visible:outline focus-visible:outline-2
+                         focus-visible:outline-offset-2 focus-visible:outline-gray-400 transition-colors cursor-pointer">
+            <svg class="w-5 h-5 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/>
+            </svg>
+            Limpiar
+          </button>
+          </div>
+
+          <p class="text-xs text-gray-400 text-center">
+            <span aria-hidden="true" class="text-red-500">*</span> Campos obligatorios
+          </p>
+          </fieldset>
+        </form>
+
+        <address aria-label="Información de contacto"
+                 class="mt-8 sm:mt-10 text-center not-italic text-gray-600 space-y-1">
+          <p class="font-semibold text-gray-900" itemprop="name">Nexova Solutions</p>
+          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Valencia</span>, <span itemprop="addressCountry">España</span>
+          </p>
+          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Miami</span>, <span itemprop="addressRegion">Florida</span>, <span itemprop="addressCountry">EE.UU.</span>
+          </p>
+          <p>Email: <a href="mailto:contacto@nexova.com"
+                        class="inline-block py-1 text-brand-500 hover:text-brand-700 transition-colors"
+                        itemprop="email">contacto@nexova.com</a></p>
+        </address>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ──────── FOOTER ──────── -->
+  <footer role="contentinfo" class="border-t border-gray-200 bg-gray-50 px-4 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+
+      <!-- Columna: Marca -->
+      <div class="sm:col-span-2 lg:col-span-1 space-y-3">
+        <p class="text-base sm:text-lg font-bold text-brand-600" itemprop="name">Nexova Solutions</p>
+        <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+          Consultoría de RRHH y Adquisición de Talento. Transformamos empresas
+          conectándolas con el talento que impulsa su crecimiento.
+        </p>
+      </div>
+
+      <!-- Columna: Contacto -->
+      <div class="space-y-3">
+        <p class="text-xs sm:text-sm font-semibold text-gray-900 uppercase tracking-wider">Contacto</p>
+        <address class="not-italic text-sm text-gray-500 space-y-2">
+          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span class="font-medium text-gray-700">Europa:</span><br>
+            <span itemprop="addressLocality">Valencia</span>, <span itemprop="addressCountry">España</span>
+          </p>
+          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span class="font-medium text-gray-700">América:</span><br>
+            <span itemprop="addressLocality">Miami</span>, <span itemprop="addressRegion">Florida</span>, <span itemprop="addressCountry">EE.UU.</span>
+          </p>
+          <p>
+            Email: <a href="mailto:contacto@nexova.com"
+                      class="inline-block py-1 text-brand-500 hover:text-brand-700 transition-colors"
+                      itemprop="email">contacto@nexova.com</a>
+          </p>
+        </address>
+      </div>
+
+      <!-- Columna: Enlaces legales + Copyright -->
+      <div class="space-y-3">
+        <p class="text-xs sm:text-sm font-semibold text-gray-900 uppercase tracking-wider">Legal</p>
+        <nav aria-label="Enlaces del pie de página">
+          <ul role="list" class="space-y-1 list-none m-0 p-0">
+            <li><a href="/aviso-legal"
+                   class="block py-2 text-sm text-gray-500 no-underline hover:text-brand-600 transition-colors">Aviso legal</a></li>
+            <li><a href="/privacidad"
+                   class="block py-2 text-sm text-gray-500 no-underline hover:text-brand-600 transition-colors">Política de privacidad</a></li>
+            <li><a href="/cookies"
+                   class="block py-2 text-sm text-gray-500 no-underline hover:text-brand-600 transition-colors">Política de cookies</a></li>
+          </ul>
+        </nav>
+        <p class="text-xs text-gray-400 pt-2">&copy; 2026 Nexova Solutions. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.getElementById('menu-toggle');
+      const menu   = document.getElementById('nav-menu');
+      const openIcon  = document.getElementById('menu-icon-open');
+      const closeIcon = document.getElementById('menu-icon-close');
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('hidden');
+          openIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+          toggle.setAttribute('aria-label', expanded ? 'Abrir menú de navegación' : 'Cerrar menú de navegación');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        menu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (window.innerWidth < 768) {
+              menu.classList.add('hidden');
+              toggle.setAttribute('aria-expanded', 'false');
+              toggle.setAttribute('aria-label', 'Abrir menú de navegación');
+              openIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+            }
+          });
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

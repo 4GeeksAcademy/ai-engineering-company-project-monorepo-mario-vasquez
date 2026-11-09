@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexova Solutions — Solicitud de empleo. Envíanos tu candidatura para unirte a nuestro equipo de headhunting, capacitación corporativa o atención al cliente.">
+  <meta name="keywords" content="Nexova, empleo, candidatura, trabajo, RRHH, headhunting, capacitación, atención al cliente">
+  <meta name="author" content="Nexova Solutions">
+  <meta property="og:title" content="Trabaja con nosotros — Nexova Solutions">
+  <meta property="og:description" content="Únete al equipo de Nexova Solutions. Solicita tu incorporación a través de nuestro formulario estructurado.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <title>Trabaja con nosotros — Nexova Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+            },
+          },
+          animation: {
+            'fade-in': 'fade-in 0.2s ease-out',
+          },
+          keyframes: {
+            'fade-in': {
+              'from': { opacity: '0', transform: 'translateY(-4px)' },
+              'to': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <script src="/validation.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://nexova.com/application/#webpage",
+    "name": "Trabaja con nosotros — Nexova Solutions",
+    "description": "Formulario de solicitud de empleo en Nexova Solutions. Envíanos tu candidatura para headhunting, capacitación corporativa o atención al cliente.",
+    "isPartOf": {
+      "@id": "https://nexova.com/#organization"
+    },
+    "about": {
+      "@id": "https://nexova.com/#organization"
+    }
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-900 bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- ──────── HEADER ──────── -->
+  <header role="banner" class="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3.5 sm:py-3">
+      <a href="/"
+         class="flex items-center gap-2.5 no-underline text-gray-900 min-h-[44px]"
+         aria-label="Nexova Solutions — Volver al inicio">
+        <svg class="w-7 h-7 shrink-0 text-brand-500" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span class="text-xl font-bold tracking-tight">
+          Nexova <span class="text-brand-500">Solutions</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación">
+        <a href="/"
+           class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-brand-500 transition-colors min-h-[44px] px-3 no-underline">
+          <svg class="w-4 h-4 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5V3h9v16.5M3 19.5h7.5M3 10.5l7.5-6 7.5 6"/>
+          </svg>
+          Volver al inicio
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="flex-1">
+
+    <!-- ──────── HERO ──────── -->
+    <section aria-labelledby="app-title"
+             class="bg-gradient-to-br from-brand-50 via-white to-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block rounded-full bg-brand-100 px-3 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-brand-700 uppercase tracking-wider mb-4">
+          Proceso de selección
+        </span>
+        <h1 id="app-title"
+            class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+          Trabaja con<span class="text-brand-500"> nosotros</span>
+        </h1>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          En Nexova Solutions buscamos talento que quiera crecer. Completa el formulario
+          y forma parte de nuestro equipo de consultoría, capacitación o atención al cliente.
+        </p>
+      </div>
+    </section>
+
+    <!-- ──────── FORMULARIO ──────── -->
+    <section id="form-section"
+             aria-labelledby="form-title"
+             class="scroll-mt-16 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      <div class="max-w-3xl mx-auto">
+
+        <h2 id="form-title" class="sr-only">Formulario de solicitud</h2>
+
+        <!-- Barra de progreso -->
+        <div class="mb-8 sm:mb-10" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" aria-label="Paso 1 de 4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs sm:text-sm font-semibold text-brand-600">Paso 1 de 4</span>
+            <span class="text-xs sm:text-sm text-gray-500">Información personal</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2" aria-hidden="true">
+            <div class="bg-brand-500 h-2 rounded-full w-1/4"></div>
+          </div>
+          <ol class="flex justify-between mt-2 text-[11px] sm:text-xs text-gray-400 font-medium" aria-hidden="true">
+            <li class="text-brand-600"><span class="hidden sm:inline">Datos </span>personales</li>
+            <li>Experiencia</li>
+            <li>Documentos</li>
+            <li>Consentimiento</li>
+          </ol>
+        </div>
+
+        <form action="/api/candidatos"
+              method="POST"
+              enctype="multipart/form-data"
+              aria-label="Formulario de solicitud de empleo">
+
+          <!-- ── BLOQUE 1: DATOS PERSONALES ── -->
+          <fieldset class="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm mb-6">
+            <legend class="text-lg sm:text-xl font-semibold text-gray-900 flex items-center gap-2">
+              <span class="flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold shrink-0" aria-hidden="true">1</span>
+              Datos personales
+            </legend>
+
+            <div class="mt-5 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5">
+
+              <!-- Nombre -->
+              <div class="sm:col-span-2">
+                <label for="app-nombre" class="block text-sm font-medium text-gray-700 mb-1">
+                  Nombre completo <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <input type="text"
+                       id="app-nombre"
+                       name="nombre"
+                       required
+                       autocomplete="name"
+                       placeholder="Ej: Laura García Martínez"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+                <p class="mt-1 text-xs text-gray-400" id="app-nombre-hint">Nombre y apellidos, tal como aparecen en tu DNI.</p>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="app-email" class="block text-sm font-medium text-gray-700 mb-1">
+                  Correo electrónico <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <input type="email"
+                       id="app-email"
+                       name="email"
+                       required
+                       autocomplete="email"
+                       inputmode="email"
+                       placeholder="correo@ejemplo.com"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+              </div>
+
+              <!-- DNI / NIE / Pasaporte -->
+              <div>
+                <label for="app-dni" class="block text-sm font-medium text-gray-700 mb-1">
+                  DNI / NIE / Pasaporte <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <input type="text"
+                       id="app-dni"
+                       name="dni"
+                       required
+                       autocomplete="off"
+                       placeholder="Ej: 12345678A"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+              </div>
+
+              <!-- Teléfono -->
+              <div>
+                <label for="app-telefono" class="block text-sm font-medium text-gray-700 mb-1">
+                  Teléfono <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <input type="tel"
+                       id="app-telefono"
+                       name="telefono"
+                       required
+                       autocomplete="tel"
+                       inputmode="tel"
+                       placeholder="+34 600 000 000"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+              </div>
+
+              <!-- País de residencia -->
+              <div>
+                <label for="app-pais" class="block text-sm font-medium text-gray-700 mb-1">
+                  País de residencia <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <select id="app-pais"
+                        name="pais"
+                        required
+                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                               focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                               transition-colors bg-white hover:border-gray-400">
+                  <option value="">Selecciona un país</option>
+                  <option value="ES">España</option>
+                  <option value="US">Estados Unidos</option>
+                  <option value="CO">Colombia</option>
+                  <option value="MX">México</option>
+                  <option value="AR">Argentina</option>
+                  <option value="PE">Perú</option>
+                  <option value="CL">Chile</option>
+                  <option value="other">Otro</option>
+                </select>
+              </div>
+
+              <!-- Ciudad -->
+              <div>
+                <label for="app-ciudad" class="block text-sm font-medium text-gray-700 mb-1">Ciudad</label>
+                <input type="text"
+                       id="app-ciudad"
+                       name="ciudad"
+                       autocomplete="address-level2"
+                       placeholder="Ej: Valencia"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+              </div>
+
+              <!-- Formación académica -->
+              <fieldset class="sm:col-span-2 border-0 p-0 m-0 min-w-0">
+                <legend class="block text-sm font-medium text-gray-700 mb-1">
+                  Formación académica <span aria-hidden="true" class="text-red-500">*</span>
+                </legend>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <label for="app-formacion-nivel" class="sr-only">Nivel de formación</label>
+                  <select id="app-formacion-nivel"
+                          name="formacion-nivel"
+                          required
+                          class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                                 transition-colors bg-white hover:border-gray-400">
+                    <option value="">Nivel</option>
+                    <option value="secundaria">Educación secundaria</option>
+                    <option value="fp-grado-medio">FP Grado medio</option>
+                    <option value="fp-grado-superior">FP Grado superior</option>
+                    <option value="grado">Grado universitario</option>
+                    <option value="licenciatura">Licenciatura</option>
+                    <option value="master">Máster / Posgrado</option>
+                    <option value="doctorado">Doctorado</option>
+                    <option value="otros">Otros</option>
+                  </select>
+                  <label for="app-formacion-titulo" class="sr-only">Titulación</label>
+                  <input type="text"
+                         id="app-formacion-titulo"
+                         name="formacion-titulo"
+                         required
+                         placeholder="Titulación (ej: ADE)"
+                         class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+                  <label for="app-formacion-centro" class="sr-only">Centro o universidad</label>
+                  <input type="text"
+                         id="app-formacion-centro"
+                         name="formacion-centro"
+                         placeholder="Centro / Universidad"
+                         class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+                </div>
+              </fieldset>
+
+              <!-- Cómo nos conociste -->
+              <div class="sm:col-span-2">
+                <label for="app-origen" class="block text-sm font-medium text-gray-700 mb-1">¿Cómo nos conociste?</label>
+                <select id="app-origen"
+                        name="origen"
+                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                               focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                               transition-colors bg-white hover:border-gray-400">
+                  <option value="">Selecciona una opción</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="web">Sitio web de Nexova</option>
+                  <option value="recomendacion">Recomendación de un empleado</option>
+                  <option value="bolsa">Bolsa de empleo (InfoJobs, Indeed, etc.)</option>
+                  <option value="feria">Feria de empleo / evento</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- ── BLOQUE 2: EXPERIENCIA Y PUESTO ── -->
+          <fieldset class="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm mb-6">
+            <legend class="text-lg sm:text-xl font-semibold text-gray-900 flex items-center gap-2">
+              <span class="flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold shrink-0" aria-hidden="true">2</span>
+              Experiencia y puesto
+            </legend>
+
+            <div class="mt-5 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5">
+
+              <!-- Puesto de interés -->
+              <div class="sm:col-span-2">
+                <label for="app-puesto" class="block text-sm font-medium text-gray-700 mb-1">
+                  Puesto de interés <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <select id="app-puesto"
+                        name="puesto"
+                        required
+                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                               focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                               transition-colors bg-white hover:border-gray-400">
+                  <option value="">Selecciona un puesto</option>
+                  <optgroup label="Operaciones de Selección de Talento">
+                    <option value="consultor-senior">Consultor de selección senior</option>
+                    <option value="consultor-junior">Consultor de selección junior</option>
+                    <option value="sourcer">Especialista en sourcing</option>
+                    <option value="coordinador-seleccion">Coordinador de selección</option>
+                  </optgroup>
+                  <optgroup label="Capacitación Corporativa">
+                    <option value="formador">Formador corporativo</option>
+                    <option value="disenador-instruccional">Diseñador instruccional</option>
+                    <option value="coordinador-capacitacion">Coordinador de capacitación</option>
+                  </optgroup>
+                  <optgroup label="Externalización de Atención al Cliente">
+                    <option value="agente-soporte">Agente de soporte al cliente</option>
+                    <option value="supervisor-soporte">Supervisor de atención al cliente</option>
+                    <option value="analista-calidad">Analista de calidad</option>
+                  </optgroup>
+                  <optgroup label="Ventas y Desarrollo de Negocio">
+                    <option value="account-manager">Account manager</option>
+                    <option value="sdr">SDR / Desarrollo de negocio</option>
+                  </optgroup>
+                  <optgroup label="Tecnología e Infraestructura">
+                    <option value="desarrollador">Desarrollador de software</option>
+                    <option value="devops">DevOps / Infraestructura</option>
+                    <option value="data-analyst">Analista de datos</option>
+                  </optgroup>
+                  <optgroup label="Otras áreas">
+                    <option value="marketing">Marketing / Comunicaciones</option>
+                    <option value="rrhh">Recursos Humanos</option>
+                    <option value="otros">Otro</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Nivel de experiencia -->
+              <div>
+                <label for="app-experiencia" class="block text-sm font-medium text-gray-700 mb-1">
+                  Nivel de experiencia <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <select id="app-experiencia"
+                        name="experiencia"
+                        required
+                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                               focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                               transition-colors bg-white hover:border-gray-400">
+                  <option value="">Selecciona un nivel</option>
+                  <option value="0-1">0-1 años (Junior / Prácticas)</option>
+                  <option value="2-3">2-3 años (Semi-senior)</option>
+                  <option value="4-6">4-6 años (Senior)</option>
+                  <option value="7+">7+ años (Lead / Manager)</option>
+                </select>
+              </div>
+
+              <!-- Disponibilidad geográfica -->
+              <div>
+                <label for="app-movilidad" class="block text-sm font-medium text-gray-700 mb-1">
+                  Disponibilidad geográfica <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <select id="app-movilidad"
+                        name="movilidad"
+                        required
+                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                               focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                               transition-colors bg-white hover:border-gray-400">
+                  <option value="">Selecciona ubicación</option>
+                  <option value="valencia">Valencia (presencial)</option>
+                  <option value="miami">Miami (presencial)</option>
+                  <option value="cualquiera">Valencia o Miami</option>
+                  <option value="remoto-es">Remoto desde España</option>
+                  <option value="remoto-ue">Remoto desde UE</option>
+                  <option value="remoto-global">Remoto (cualquier huso)</option>
+                </select>
+              </div>
+
+              <!-- Disponibilidad temporal -->
+              <div>
+                <label for="app-disponibilidad" class="block text-sm font-medium text-gray-700 mb-1">
+                  Disponibilidad temporal <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <select id="app-disponibilidad"
+                        name="disponibilidad"
+                        required
+                        class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                               focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                               transition-colors bg-white hover:border-gray-400">
+                  <option value="">Selecciona disponibilidad</option>
+                  <option value="inmediata">Inmediata</option>
+                  <option value="15-dias">15 días</option>
+                  <option value="1-mes">1 mes</option>
+                  <option value="2-meses">2 meses o más</option>
+                </select>
+              </div>
+
+              <!-- Pretensión salarial -->
+              <fieldset class="border-0 p-0 m-0 min-w-0">
+                <legend class="block text-sm font-medium text-gray-700 mb-1">
+                  Pretensión salarial bruta anual
+                </legend>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="app-salarial-min" class="sr-only">Salario mínimo</label>
+                    <input type="number"
+                           id="app-salarial-min"
+                           name="salarial-min"
+                           min="0"
+                           step="1000"
+                           inputmode="numeric"
+                           placeholder="Mín (€)"
+                           class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                  placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                  focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+                  </div>
+                  <div>
+                    <label for="app-salarial-max" class="sr-only">Salario máximo</label>
+                    <input type="number"
+                           id="app-salarial-max"
+                           name="salarial-max"
+                           min="0"
+                           step="1000"
+                           inputmode="numeric"
+                           placeholder="Máx (€)"
+                           class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                  placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                  focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+                  </div>
+                </div>
+                <p class="mt-1 text-xs text-gray-400">Rango salarial bruto anual deseado (opcional, en euros).</p>
+              </fieldset>
+
+              <!-- Habilidades principales (tags textuales) -->
+              <div class="sm:col-span-2">
+                <label for="app-habilidades" class="block text-sm font-medium text-gray-700 mb-1">
+                  Habilidades principales <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <input type="text"
+                       id="app-habilidades"
+                       name="habilidades"
+                       required
+                       placeholder="Ej: Selección de personal, inglés C1, liderazgo, análisis de datos"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+                <p class="mt-1 text-xs text-gray-400">Separa cada habilidad con una coma.</p>
+              </div>
+
+              <!-- Idiomas -->
+              <fieldset class="sm:col-span-2 border-0 p-0 m-0 min-w-0">
+                <legend class="block text-sm font-medium text-gray-700 mb-1">
+                  Idiomas <span aria-hidden="true" class="text-red-500">*</span>
+                </legend>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <label for="app-idioma-principal" class="sr-only">Idioma principal</label>
+                  <select id="app-idioma-principal"
+                          name="idioma-principal"
+                          required
+                          class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                                 transition-colors bg-white hover:border-gray-400">
+                    <option value="">Idioma principal</option>
+                    <option value="espanol">Español</option>
+                    <option value="ingles">Inglés</option>
+                    <option value="frances">Francés</option>
+                    <option value="aleman">Alemán</option>
+                    <option value="portugues">Portugués</option>
+                    <option value="italiano">Italiano</option>
+                    <option value="catalan">Catalán / Valenciano</option>
+                    <option value="otro-idioma">Otro</option>
+                  </select>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <label for="app-idioma-nivel" class="sr-only">Nivel del idioma</label>
+                    <select id="app-idioma-nivel"
+                            name="idioma-nivel"
+                            required
+                            class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                   focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                                   transition-colors bg-white hover:border-gray-400">
+                      <option value="">Nivel</option>
+                      <option value="a1">A1 (Básico)</option>
+                      <option value="a2">A2 (Elemental)</option>
+                      <option value="b1">B1 (Intermedio)</option>
+                      <option value="b2">B2 (Intermedio alto)</option>
+                      <option value="c1">C1 (Avanzado)</option>
+                      <option value="c2">C2 (Nativo)</option>
+                    </select>
+                    <label for="app-idioma-segundo" class="sr-only">Segundo idioma</label>
+                    <select id="app-idioma-segundo"
+                            name="idioma-segundo"
+                            class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                   focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+                                   transition-colors bg-white hover:border-gray-400">
+                      <option value="">Segundo idioma</option>
+                      <option value="espanol">Español</option>
+                      <option value="ingles">Inglés</option>
+                      <option value="frances">Francés</option>
+                      <option value="aleman">Alemán</option>
+                      <option value="portugues">Portugués</option>
+                      <option value="italiano">Italiano</option>
+                      <option value="catalan">Catalán / Valenciano</option>
+                      <option value="ninguno">Ninguno</option>
+                    </select>
+                  </div>
+                </div>
+                <p class="mt-1 text-xs text-gray-400">Selecciona tu idioma principal y nivel según el marco común europeo (MCER).</p>
+              </fieldset>
+
+              <!-- Mensaje / carta de presentación -->
+              <div class="sm:col-span-2">
+                <label for="app-mensaje" class="block text-sm font-medium text-gray-700 mb-1">
+                  Carta de presentación
+                </label>
+                <textarea id="app-mensaje"
+                          name="mensaje"
+                          rows="5"
+                          placeholder="Cuéntanos por qué quieres trabajar en Nexova, tu experiencia relevante y lo que te hace único..."
+                          class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                 focus:border-brand-500 transition-colors bg-white hover:border-gray-400 resize-y"></textarea>
+                <p class="mt-1 text-xs text-gray-400">Máximo 3000 caracteres. Opcional, pero muy recomendado.</p>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- ── BLOQUE 3: DOCUMENTOS ── -->
+          <fieldset class="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm mb-6">
+            <legend class="text-lg sm:text-xl font-semibold text-gray-900 flex items-center gap-2">
+              <span class="flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold shrink-0" aria-hidden="true">3</span>
+              Documentos
+            </legend>
+
+            <div class="mt-5 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5">
+
+              <!-- CV -->
+              <div>
+                <label for="app-cv" class="block text-sm font-medium text-gray-700 mb-1">
+                  Currículum vitae (CV) <span aria-hidden="true" class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <input type="file"
+                         id="app-cv"
+                         name="cv"
+                         accept=".pdf,.doc,.docx"
+                         required
+                         aria-describedby="app-cv-hint"
+                         class="block w-full text-sm text-gray-500 file:mr-2 sm:file:mr-4 file:py-2.5 file:px-3 sm:file:px-4 file:min-h-[44px]
+                                file:rounded-lg file:border-0 file:text-xs sm:file:text-sm file:font-semibold
+                                file:bg-brand-50 file:text-brand-600 hover:file:bg-brand-100
+                                file:cursor-pointer file:transition-colors cursor-pointer
+                                focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
+                </div>
+                <p class="mt-1 text-xs text-gray-400" id="app-cv-hint">PDF, DOC o DOCX. Máximo 10 MB.</p>
+              </div>
+
+              <!-- Carta de recomendación (opcional) -->
+              <div>
+                <label for="app-recomendacion" class="block text-sm font-medium text-gray-700 mb-1">
+                  Carta de recomendación
+                </label>
+                <div class="relative">
+                  <input type="file"
+                         id="app-recomendacion"
+                         name="recomendacion"
+                         accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                         aria-describedby="app-recom-hint"
+                         class="block w-full text-sm text-gray-500 file:mr-2 sm:file:mr-4 file:py-2.5 file:px-3 sm:file:px-4 file:min-h-[44px]
+                                file:rounded-lg file:border-0 file:text-xs sm:file:text-sm file:font-semibold
+                                file:bg-brand-50 file:text-brand-600 hover:file:bg-brand-100
+                                file:cursor-pointer file:transition-colors cursor-pointer
+                                focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
+                </div>
+                <p class="mt-1 text-xs text-gray-400" id="app-recom-hint">Opcional. PDF, DOC o imagen. Máximo 10 MB.</p>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="sm:col-span-2">
+                <label for="app-linkedin" class="block text-sm font-medium text-gray-700 mb-1">Perfil de LinkedIn</label>
+                <input type="url"
+                       id="app-linkedin"
+                       name="linkedin"
+                       inputmode="url"
+                       placeholder="https://linkedin.com/in/tu-perfil"
+                       class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                              placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                              focus:border-brand-500 transition-colors bg-white hover:border-gray-400">
+              </div>
+
+              <!-- Referencias profesionales -->
+              <div class="sm:col-span-2">
+                <label for="app-referencias" class="block text-sm font-medium text-gray-700 mb-1">Referencias profesionales</label>
+                <textarea id="app-referencias"
+                          name="referencias"
+                          rows="3"
+                          placeholder="Nombre, cargo, empresa y contacto de 2-3 personas que puedan referenciar tu trabajo. Ej: María López, Directora de RRHH en TechCorp, maria@techcorp.com"
+                          class="block w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                                 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500
+                                 focus:border-brand-500 transition-colors bg-white hover:border-gray-400 resize-y"></textarea>
+                <p class="mt-1 text-xs text-gray-400">Opcional, pero acelera el proceso de verificación.</p>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- ── BLOQUE CONSENTIMIENTO ── -->
+          <fieldset class="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm mb-8">
+            <legend class="text-base sm:text-lg font-semibold text-gray-900">Protección de datos</legend>
+            <div class="mt-4 space-y-4">
+
+              <label class="flex items-start gap-3 cursor-pointer py-2 min-h-[44px]" for="app-consentimiento">
+                <input type="checkbox"
+                       id="app-consentimiento"
+                       name="consentimiento"
+                       required
+                       class="mt-1 h-5 w-5 shrink-0 rounded border-gray-300 text-brand-500
+                              focus:ring-brand-500 cursor-pointer">
+                <span class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  He leído y acepto la
+                  <a href="/privacidad" class="text-brand-500 underline hover:text-brand-700 transition-colors">política de privacidad</a>
+                  y autorizo a Nexova Solutions a tratar mis datos personales con la finalidad de gestionar mi candidatura.
+                  <span aria-hidden="true" class="text-red-500">*</span>
+                </span>
+              </label>
+
+              <label class="flex items-start gap-3 cursor-pointer py-2 min-h-[44px]" for="app-newsletter">
+                <input type="checkbox"
+                       id="app-newsletter"
+                       name="newsletter"
+                       class="mt-1 h-5 w-5 shrink-0 rounded border-gray-300 text-brand-500
+                              focus:ring-brand-500 cursor-pointer">
+                <span class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  Deseo recibir comunicaciones sobre oportunidades profesionales y novedades de Nexova Solutions.
+                </span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- ── BOTONES ── -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <button type="submit"
+                    class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500
+                           px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white min-h-[48px]
+                           shadow-md hover:bg-brand-600 focus-visible:outline focus-visible:outline-2
+                           focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-colors cursor-pointer">
+              <svg class="w-5 h-5 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+              </svg>
+              Enviar candidatura
+            </button>
+            <button type="button"
+                    onclick="this.closest('form').reset()"
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300
+                           bg-white px-6 py-3.5 text-sm font-semibold text-gray-700 min-h-[48px]
+                           hover:bg-gray-50 focus-visible:outline focus-visible:outline-2
+                           focus-visible:outline-offset-2 focus-visible:outline-gray-400 transition-colors cursor-pointer">
+              <svg class="w-5 h-5 shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/>
+              </svg>
+              Limpiar formulario
+            </button>
+          </div>
+
+          <p class="mt-4 text-xs text-gray-400 text-center">
+            <span aria-hidden="true" class="text-red-500">*</span> Campos obligatorios.
+            Tus datos se tratarán conforme a nuestra
+            <a href="/privacidad" class="text-brand-500 underline hover:text-brand-700 transition-colors">política de privacidad</a>.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ──────── FOOTER ──────── -->
+  <footer role="contentinfo"
+          class="bg-white border-t border-gray-200 px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <p class="text-xs sm:text-sm text-gray-500">
+        &copy; 2026 Nexova Solutions. Todos los derechos reservados.
+      </p>
+      <nav aria-label="Enlaces legales">
+        <ul role="list" class="flex flex-wrap justify-center gap-3 sm:gap-5 list-none m-0 p-0">
+          <li><a href="/privacidad" class="text-xs sm:text-sm text-gray-500 hover:text-brand-500 transition-colors no-underline">Privacidad</a></li>
+          <li><a href="/aviso-legal" class="text-xs sm:text-sm text-gray-500 hover:text-brand-500 transition-colors no-underline">Aviso legal</a></li>
+          <li><a href="/" class="text-xs sm:text-sm text-gray-500 hover:text-brand-500 transition-colors no-underline">Volver al inicio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
