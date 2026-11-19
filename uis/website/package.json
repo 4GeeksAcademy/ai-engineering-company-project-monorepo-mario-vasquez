@@ -1,0 +1,10 @@
+{
+  "name": "nexova-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web corporativo de Nexova Solutions",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000"
+  }
+}

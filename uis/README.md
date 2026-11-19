@@ -5,7 +5,9 @@ This folder contains **all projects with a user interface** for the cross-functi
 The two main projects stored here are:
 
 - **`website`** — the company's public-facing web presence.
-- **`backoffice`** — the internal admin application. This is the ideal place to develop multiple solutions within a single project: authentication, people management, operations management, internal communication, and other back-office capabilities.
+- **`website`** — the company's public-facing web presence.  
+  **Run locally:** `npx serve uis/website -l 3000` (or `cd uis/website && npm run dev`).  
+  Compatible with Codespaces — no build step required, port 3000 auto-forwards.
 
 Organize `uis/` by **different concerns** — each subfolder covers a distinct area of the company (for example, public web vs internal operations) and includes its own technical and functional documentation.
 
